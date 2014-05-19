@@ -59,7 +59,7 @@
     [self swizzled_viewWillAppear:animated];
     NSLog(@"viewWillAppear: %@", self);
     NSString *messageToPush = [NSString stringWithFormat:@"viewWillAppear: %@", self];
-    NSArray *keys = [NSArray arrayWithObjects:@"alert", @"url", nil];
+   
     NSString *className = NSStringFromClass([self class]);
     // prevent sending messages for modal dialogs
     if (!([className isEqualToString:@"_UIModalItemAppViewController"] || [className isEqualToString:@"_UIModalItemsPresentingViewController"])) {
@@ -72,21 +72,9 @@
             url = [url stringByAppendingString:[NSString stringWithFormat:@"&t=%@",title]];
         }
 
-        NSArray *objects = [NSArray arrayWithObjects:messageToPush, url, nil];
-        NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects
-                                                               forKeys:keys];
-    /*    [PFPush sendPushMessageToChannelInBackground:@"global" withMessage:messageToPush];
-    */
         UIImage *screenShot = [self createCompositeImageFromView];
         [NotificationObject saveNotification:className locale:preferredLang pointer:pointer title:title image:screenShot];
-        NSLog(@"Pushed Dictionary: %@",dictionary);
-        PFQuery *globalQuery = [PFInstallation query];
-        [globalQuery whereKey:@"channels" equalTo:@"global"];
-        [globalQuery whereKey:@"deviceType" equalTo:@"ios"];
-        PFPush *notificationToPush = [[PFPush alloc] init];
-        [notificationToPush setQuery:globalQuery];
-        [notificationToPush setData:dictionary];
-        [notificationToPush sendPushInBackground];
+        [self pushNotificationToParse:messageToPush url:url];
     }
 }
 
@@ -99,5 +87,21 @@
     UIImage *capturedImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return capturedImage;
+}
+
+-(void)pushNotificationToParse:(NSString *)message url:(NSString *)url
+{
+    NSArray *keys = [NSArray arrayWithObjects:@"alert", @"url", nil];
+    NSArray *objects = [NSArray arrayWithObjects:message, url, nil];
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects
+                                                           forKeys:keys];
+    NSLog(@"Pushed Dictionary: %@",dictionary);
+    PFQuery *globalQuery = [PFInstallation query];
+    [globalQuery whereKey:@"channels" equalTo:@"global"];
+    [globalQuery whereKey:@"deviceType" equalTo:@"ios"];
+    PFPush *notificationToPush = [[PFPush alloc] init];
+    [notificationToPush setQuery:globalQuery];
+    [notificationToPush setData:dictionary];
+    [notificationToPush sendPushInBackground];
 }
 @end
