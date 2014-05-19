@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		0159BA4619265FB00019EB70 /* UniversalLib */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0159BA4719265FB00019EB70 /* Build configuration list for PBXAggregateTarget "UniversalLib" */;
+			buildPhases = (
+				0159BA4A19265FD50019EB70 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = UniversalLib;
+			productName = UniversalLib;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0159BA2019265E770019EB70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0159BA1F19265E770019EB70 /* Foundation.framework */; };
+		0159BA2519265E770019EB70 /* APNLib.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 0159BA2419265E770019EB70 /* APNLib.h */; };
+		0159BA2719265E770019EB70 /* APNLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159BA2619265E770019EB70 /* APNLib.m */; };
+		0159BA2E19265E770019EB70 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0159BA2D19265E770019EB70 /* XCTest.framework */; };
+		0159BA2F19265E770019EB70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0159BA1F19265E770019EB70 /* Foundation.framework */; };
+		0159BA3119265E770019EB70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0159BA3019265E770019EB70 /* UIKit.framework */; };
+		0159BA3419265E770019EB70 /* libAPNLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0159BA1C19265E770019EB70 /* libAPNLib.a */; };
+		0159BA3A19265E770019EB70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0159BA3819265E770019EB70 /* InfoPlist.strings */; };
+		0159BA3C19265E770019EB70 /* APNLibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159BA3B19265E770019EB70 /* APNLibTests.m */; };
+		0159BA56192667840019EB70 /* ViewController+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159BA55192667840019EB70 /* ViewController+Utilities.m */; };
+		0159BA5A192669010019EB70 /* ViewController+Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 0159BA54192667840019EB70 /* ViewController+Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0159BA5B19266B140019EB70 /* ViewController+Utilities.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 0159BA54192667840019EB70 /* ViewController+Utilities.h */; };
+		0159BA5D19267E1F0019EB70 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0159BA5C19267E1F0019EB70 /* Parse.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		0192B5B21929BC3E0053A1DB /* NotificationObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 0192B5B01929BC3E0053A1DB /* NotificationObject.h */; };
+		0192B5B31929BC3E0053A1DB /* NotificationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0192B5B11929BC3E0053A1DB /* NotificationObject.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0159BA3219265E770019EB70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0159BA1419265E770019EB70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0159BA1B19265E770019EB70;
+			remoteInfo = APNLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0159BA1A19265E770019EB70 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				0159BA5B19266B140019EB70 /* ViewController+Utilities.h in Copy Files */,
+				0159BA2519265E770019EB70 /* APNLib.h in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0159BA1C19265E770019EB70 /* libAPNLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAPNLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0159BA1F19265E770019EB70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0159BA2319265E770019EB70 /* APNLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "APNLib-Prefix.pch"; sourceTree = "<group>"; };
+		0159BA2419265E770019EB70 /* APNLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APNLib.h; sourceTree = "<group>"; };
+		0159BA2619265E770019EB70 /* APNLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APNLib.m; sourceTree = "<group>"; };
+		0159BA2C19265E770019EB70 /* APNLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APNLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0159BA2D19265E770019EB70 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0159BA3019265E770019EB70 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		0159BA3719265E770019EB70 /* APNLibTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "APNLibTests-Info.plist"; sourceTree = "<group>"; };
+		0159BA3919265E770019EB70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0159BA3B19265E770019EB70 /* APNLibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APNLibTests.m; sourceTree = "<group>"; };
+		0159BA54192667840019EB70 /* ViewController+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+Utilities.h"; sourceTree = "<group>"; };
+		0159BA55192667840019EB70 /* ViewController+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+Utilities.m"; sourceTree = "<group>"; };
+		0159BA5C19267E1F0019EB70 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		0159BA5E1926817B0019EB70 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0159BA5F1926817B0019EB70 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		0159BA601926817B0019EB70 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0159BA611926817B0019EB70 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0159BA621926817B0019EB70 /* libc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libc.dylib; path = usr/lib/libc.dylib; sourceTree = SDKROOT; };
+		0159BA631926817B0019EB70 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		0159BA641926817B0019EB70 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0159BA651926817B0019EB70 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0159BA661926817B0019EB70 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		0159BA671926817B0019EB70 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0192B5B01929BC3E0053A1DB /* NotificationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationObject.h; path = Model/NotificationObject.h; sourceTree = "<group>"; };
+		0192B5B11929BC3E0053A1DB /* NotificationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotificationObject.m; path = Model/NotificationObject.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0159BA1919265E770019EB70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0159BA5D19267E1F0019EB70 /* Parse.framework in Frameworks */,
+				0159BA2019265E770019EB70 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0159BA2919265E770019EB70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0159BA2E19265E770019EB70 /* XCTest.framework in Frameworks */,
+				0159BA3119265E770019EB70 /* UIKit.framework in Frameworks */,
+				0159BA2F19265E770019EB70 /* Foundation.framework in Frameworks */,
+				0159BA3419265E770019EB70 /* libAPNLib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0159BA1319265E770019EB70 = {
+			isa = PBXGroup;
+			children = (
+				0159BA2119265E770019EB70 /* APNLib */,
+				0159BA3519265E770019EB70 /* APNLibTests */,
+				0159BA1E19265E770019EB70 /* Frameworks */,
+				0159BA1D19265E770019EB70 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0159BA1D19265E770019EB70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0159BA1C19265E770019EB70 /* libAPNLib.a */,
+				0159BA2C19265E770019EB70 /* APNLibTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0159BA1E19265E770019EB70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0159BA5E1926817B0019EB70 /* AudioToolbox.framework */,
+				0159BA5F1926817B0019EB70 /* CFNetwork.framework */,
+				0159BA601926817B0019EB70 /* CoreGraphics.framework */,
+				0159BA611926817B0019EB70 /* CoreLocation.framework */,
+				0159BA621926817B0019EB70 /* libc.dylib */,
+				0159BA631926817B0019EB70 /* MobileCoreServices.framework */,
+				0159BA641926817B0019EB70 /* QuartzCore.framework */,
+				0159BA651926817B0019EB70 /* Security.framework */,
+				0159BA661926817B0019EB70 /* StoreKit.framework */,
+				0159BA671926817B0019EB70 /* SystemConfiguration.framework */,
+				0159BA5C19267E1F0019EB70 /* Parse.framework */,
+				0159BA1F19265E770019EB70 /* Foundation.framework */,
+				0159BA2D19265E770019EB70 /* XCTest.framework */,
+				0159BA3019265E770019EB70 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0159BA2119265E770019EB70 /* APNLib */ = {
+			isa = PBXGroup;
+			children = (
+				0192B5AF1929BB3C0053A1DB /* Model */,
+				0159BA54192667840019EB70 /* ViewController+Utilities.h */,
+				0159BA55192667840019EB70 /* ViewController+Utilities.m */,
+				0159BA4D1926658F0019EB70 /* ViewController */,
+				0159BA2419265E770019EB70 /* APNLib.h */,
+				0159BA2619265E770019EB70 /* APNLib.m */,
+				0159BA2219265E770019EB70 /* Supporting Files */,
+			);
+			path = APNLib;
+			sourceTree = "<group>";
+		};
+		0159BA2219265E770019EB70 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0159BA2319265E770019EB70 /* APNLib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0159BA3519265E770019EB70 /* APNLibTests */ = {
+			isa = PBXGroup;
+			children = (
+				0159BA3B19265E770019EB70 /* APNLibTests.m */,
+				0159BA3619265E770019EB70 /* Supporting Files */,
+			);
+			path = APNLibTests;
+			sourceTree = "<group>";
+		};
+		0159BA3619265E770019EB70 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0159BA3719265E770019EB70 /* APNLibTests-Info.plist */,
+				0159BA3819265E770019EB70 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0159BA4D1926658F0019EB70 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		0192B5AF1929BB3C0053A1DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0192B5B01929BC3E0053A1DB /* NotificationObject.h */,
+				0192B5B11929BC3E0053A1DB /* NotificationObject.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0159BA58192668680019EB70 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0192B5B21929BC3E0053A1DB /* NotificationObject.h in Headers */,
+				0159BA5A192669010019EB70 /* ViewController+Utilities.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0159BA1B19265E770019EB70 /* APNLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0159BA3F19265E770019EB70 /* Build configuration list for PBXNativeTarget "APNLib" */;
+			buildPhases = (
+				0159BA1819265E770019EB70 /* Sources */,
+				0159BA1919265E770019EB70 /* Frameworks */,
+				0159BA1A19265E770019EB70 /* Copy Files */,
+				0159BA58192668680019EB70 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = APNLib;
+			productName = APNLib;
+			productReference = 0159BA1C19265E770019EB70 /* libAPNLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		0159BA2B19265E770019EB70 /* APNLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0159BA4219265E770019EB70 /* Build configuration list for PBXNativeTarget "APNLibTests" */;
+			buildPhases = (
+				0159BA2819265E770019EB70 /* Sources */,
+				0159BA2919265E770019EB70 /* Frameworks */,
+				0159BA2A19265E770019EB70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0159BA3319265E770019EB70 /* PBXTargetDependency */,
+			);
+			name = APNLibTests;
+			productName = APNLibTests;
+			productReference = 0159BA2C19265E770019EB70 /* APNLibTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0159BA1419265E770019EB70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Scott Richards";
+			};
+			buildConfigurationList = 0159BA1719265E770019EB70 /* Build configuration list for PBXProject "APNLib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0159BA1319265E770019EB70;
+			productRefGroup = 0159BA1D19265E770019EB70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0159BA1B19265E770019EB70 /* APNLib */,
+				0159BA2B19265E770019EB70 /* APNLibTests */,
+				0159BA4619265FB00019EB70 /* UniversalLib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0159BA2A19265E770019EB70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0159BA3A19265E770019EB70 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0159BA4A19265FD50019EB70 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# define output folder environment variable\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target ImageFilters ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\nxcodebuild -target ImageFilters -configuration ${CONFIGURATION} -sdk iphonesimulator -arch i386 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 2. Create universal binary file using lipo\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\"\n\n# Last touch. copy the header files. Just for convenience\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/include\" \"${UNIVERSAL_OUTPUTFOLDER}/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0159BA1819265E770019EB70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0192B5B31929BC3E0053A1DB /* NotificationObject.m in Sources */,
+				0159BA2719265E770019EB70 /* APNLib.m in Sources */,
+				0159BA56192667840019EB70 /* ViewController+Utilities.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0159BA2819265E770019EB70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0159BA3C19265E770019EB70 /* APNLibTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0159BA3319265E770019EB70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0159BA1B19265E770019EB70 /* APNLib */;
+			targetProxy = 0159BA3219265E770019EB70 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0159BA3819265E770019EB70 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0159BA3919265E770019EB70 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0159BA3D19265E770019EB70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0159BA3E19265E770019EB70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0159BA4019265E770019EB70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/APNLib.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "APNLib/APNLib-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0159BA4119265E770019EB70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/APNLib.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "APNLib/APNLib-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		0159BA4319265E770019EB70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "APNLib/APNLib-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "APNLibTests/APNLibTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0159BA4419265E770019EB70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "APNLib/APNLib-Prefix.pch";
+				INFOPLIST_FILE = "APNLibTests/APNLibTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		0159BA4819265FB00019EB70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0159BA4919265FB00019EB70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0159BA1719265E770019EB70 /* Build configuration list for PBXProject "APNLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0159BA3D19265E770019EB70 /* Debug */,
+				0159BA3E19265E770019EB70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0159BA3F19265E770019EB70 /* Build configuration list for PBXNativeTarget "APNLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0159BA4019265E770019EB70 /* Debug */,
+				0159BA4119265E770019EB70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0159BA4219265E770019EB70 /* Build configuration list for PBXNativeTarget "APNLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0159BA4319265E770019EB70 /* Debug */,
+				0159BA4419265E770019EB70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0159BA4719265FB00019EB70 /* Build configuration list for PBXAggregateTarget "UniversalLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0159BA4819265FB00019EB70 /* Debug */,
+				0159BA4919265FB00019EB70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0159BA1419265E770019EB70 /* Project object */;
+}
