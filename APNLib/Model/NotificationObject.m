@@ -16,7 +16,7 @@
     PFObject *notification = [PFObject objectWithClassName:@"Notification"];
     notification[@"class"] = class;
     notification[@"locale"] = locale;
-    notification[@"id"] = pointer;
+    notification[@"pointer"] = pointer;
     if (title)
         notification[@"title"] = title;
     if (screenshot) {
