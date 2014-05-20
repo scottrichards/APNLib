@@ -66,19 +66,13 @@
     if (!([className isEqualToString:@"_UIModalItemAppViewController"] || [className isEqualToString:@"_UIModalItemsPresentingViewController"])) {
         NSLog(@"viewWillAppear: %@", self);
         NSString *preferredLang = [[NSLocale preferredLanguages] objectAtIndex:0];
-        NSString *title;
+        NSString *title = self.navigationItem.title;
         NSString *pointer = [NSString stringWithFormat:@"%p",self]; // format the pointer as a string using %p
-        NSString *url = [NSString stringWithFormat:@"p=%@&l=%@&c=%@",pointer,preferredLang,className];
-        if (self.navigationItem.title) {
-            title = [self.navigationItem.title stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-            url = [url stringByAppendingString:[NSString stringWithFormat:@"&t=%@",title]];
-        }
-
 #ifdef USE_PUSH_NOTIFICATION
         UIImage *screenShot = [self createCompositeImageFromView];
-        [NotificationObject saveNotification:className locale:preferredLang pointer:pointer title:title image:screenShot];
-        [self pushNotificationToParse:messageToPush url:url];
+        [self saveNotification:className locale:preferredLang pointer:pointer title:title image:screenShot message:messageToPush];
 #else
+        NSString *url = [NSString stringWithFormat:@"p=%@&l=%@&c=%@",pointer,preferredLang,className];
         [self pushLocalNotification:messageToPush url:url];
 #endif
     }
@@ -130,4 +124,27 @@
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 }
+
+- (void)saveNotification:(NSString *)class locale:(NSString *)locale pointer:(NSString *)pointer title:(NSString *)title image:(UIImage *)screenshot message:(NSString *)message
+{
+    PFObject *notification = [PFObject objectWithClassName:@"Notification"];
+    notification[@"class"] = class;
+    notification[@"locale"] = locale;
+    notification[@"pointer"] = pointer;
+    if (title)
+        notification[@"title"] = title;
+    if (screenshot) {
+        NSData *jpegData = UIImageJPEGRepresentation(screenshot,0.9);
+        PFFile *imageFile = [PFFile fileWithName:@"image.jpeg" data:jpegData];
+        notification[@"screenshot"] = imageFile;
+    }
+    [notification saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
+     {
+         if (succeeded) {
+             NSString *url = [NSString stringWithFormat:@"/show/%@",notification.objectId];
+             [self pushLocalNotification:message url:url];
+         }
+     }];
+}
+
 @end
